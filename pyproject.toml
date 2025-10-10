@@ -20,6 +20,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: Implementation :: CPython",
     "License :: OSI Approved :: Apache Software License",
     "Environment :: Web Environment",
@@ -114,6 +115,7 @@ env_list = [
     "py311",
     "py312",
     "py313",
+    "py314",
     "minversions",
     "coverage",
 ]
