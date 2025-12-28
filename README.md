@@ -1,3 +1,6 @@
+> [!NOTE]
+> This is a fork of [python-scim/scim2-server](https://github.com/python-scim/scim2-server) with some additional tweaks for the e2e testing of the [Pocket ID](https://github.com/pocket-id/pocket-id) SCIM implementation.
+
 # scim2-server
 
 This is an example WSGI-SCIM server using [scim2-models](https://github.com/python-scim/scim2-models).
