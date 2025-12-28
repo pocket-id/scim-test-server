@@ -56,6 +56,11 @@ class SCIMProvider:
         rules = itertools.chain.from_iterable(
             [
                 Rule(
+                    "/reset",
+                    endpoint="reset",
+                    methods=("POST",),
+                ),
+                Rule(
                     f"{prefix}/ServiceProviderConfig",
                     endpoint="service_provider_config",
                     methods=("GET",),
@@ -381,6 +386,11 @@ class SCIMProvider:
         the endpoint does not provide this feature.
         """
         raise WerkzeugNotImplemented
+
+    def call_reset(self, request: Request, **kwargs):
+        """Reset all stored resources."""
+        self.backend.reset()
+        return self.make_response(None, 204)
 
     def register_schema(self, schema: Schema):
         self.backend.register_schema(schema)

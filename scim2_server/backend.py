@@ -175,6 +175,10 @@ class Backend:
         """
         raise NotImplementedError
 
+    def reset(self) -> None:
+        """Reset all stored resources."""
+        raise NotImplementedError
+
 
 class InMemoryBackend(Backend):
     """An example in-memory backend for the SCIM provider.
@@ -397,3 +401,7 @@ class InMemoryBackend(Backend):
             self.resources[found_res_idx] = updated_resource
             return updated_resource
         return None
+
+    def reset(self) -> None:
+        """Clear all stored resources."""
+        self.resources = []
